@@ -6804,3 +6804,552 @@ Caused by: java.lang.NullPointerException
 
 !ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-08-31 00:48:06.947
 !MESSAGE executing callback sts4.classpath.KlqNkEXc SUCCESS [done]
+
+!ENTRY org.eclipse.equinox.registry 4 1 2020-08-31 01:27:25.872
+!MESSAGE Plug-in com.codota.eclipse was unable to load class com.codota.eclipse.NullDocumentSetupParticipant.
+!STACK 0
+java.lang.ClassNotFoundException: An error occurred while automatically activating bundle com.codota.eclipse (1232).
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:126)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:571)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:346)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:398)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:476)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:425)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:417)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:171)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:169)
+	at okhttp3.RealCall$AsyncCall.execute(RealCall.java:129)
+	at okhttp3.internal.NamedRunnable.run(NamedRunnable.java:32)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.osgi.framework.BundleException: Exception in com.codota.eclipse.CodotaPluginActivator.start() of bundle com.codota.eclipse.
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:863)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:791)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:1015)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:365)
+	at org.eclipse.osgi.container.Module.doStart(Module.java:603)
+	at org.eclipse.osgi.container.Module.start(Module.java:467)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:493)
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:117)
+	... 14 more
+Caused by: java.lang.NullPointerException
+	at com.codota.eclipse.assistant.listeners.EditorListenersManager.start(EditorListenersManager.java:57)
+	at com.codota.eclipse.CodotaPluginActivator.hookToNewWindows(CodotaPluginActivator.java:141)
+	at com.codota.eclipse.CodotaPluginActivator.start(CodotaPluginActivator.java:83)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:842)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:834)
+	... 21 more
+
+!ENTRY org.eclipse.lsp4e 4 0 2020-08-31 01:27:28.182
+!MESSAGE 
+!STACK 0
+java.lang.InterruptedException
+	at java.util.concurrent.CompletableFuture.reportGet(Unknown Source)
+	at java.util.concurrent.CompletableFuture.get(Unknown Source)
+	at org.springframework.tooling.boot.ls.jdt.LSPTextHover.getHoverInfo(LSPTextHover.java:109)
+	at org.springframework.tooling.boot.ls.jdt.SpringBootJavaHoverProvider.getHoverInfo2(SpringBootJavaHoverProvider.java:42)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:165)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:132)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:169)
+
+!ENTRY org.eclipse.equinox.registry 4 1 2020-08-31 01:27:44.362
+!MESSAGE Plug-in com.codota.eclipse was unable to load class com.codota.eclipse.NullDocumentSetupParticipant.
+!STACK 0
+java.lang.ClassNotFoundException: An error occurred while automatically activating bundle com.codota.eclipse (1232).
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:126)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:571)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:346)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:398)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:476)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:425)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:417)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:171)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:169)
+	at okhttp3.RealCall$AsyncCall.execute(RealCall.java:129)
+	at okhttp3.internal.NamedRunnable.run(NamedRunnable.java:32)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.osgi.framework.BundleException: Exception in com.codota.eclipse.CodotaPluginActivator.start() of bundle com.codota.eclipse.
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:863)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:791)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:1015)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:365)
+	at org.eclipse.osgi.container.Module.doStart(Module.java:603)
+	at org.eclipse.osgi.container.Module.start(Module.java:467)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:493)
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:117)
+	... 14 more
+Caused by: java.lang.NullPointerException
+	at com.codota.eclipse.assistant.listeners.EditorListenersManager.start(EditorListenersManager.java:57)
+	at com.codota.eclipse.CodotaPluginActivator.hookToNewWindows(CodotaPluginActivator.java:141)
+	at com.codota.eclipse.CodotaPluginActivator.start(CodotaPluginActivator.java:83)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:842)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:834)
+	... 21 more
+
+!ENTRY org.eclipse.equinox.registry 4 1 2020-08-31 01:29:27.105
+!MESSAGE Plug-in com.codota.eclipse was unable to load class com.codota.eclipse.NullDocumentSetupParticipant.
+!STACK 0
+java.lang.ClassNotFoundException: An error occurred while automatically activating bundle com.codota.eclipse (1232).
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:126)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:571)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:346)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:398)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:476)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:425)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:417)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:171)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:169)
+	at okhttp3.RealCall$AsyncCall.execute(RealCall.java:129)
+	at okhttp3.internal.NamedRunnable.run(NamedRunnable.java:32)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.osgi.framework.BundleException: Exception in com.codota.eclipse.CodotaPluginActivator.start() of bundle com.codota.eclipse.
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:863)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:791)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:1015)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:365)
+	at org.eclipse.osgi.container.Module.doStart(Module.java:603)
+	at org.eclipse.osgi.container.Module.start(Module.java:467)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:493)
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:117)
+	... 14 more
+Caused by: java.lang.NullPointerException
+	at com.codota.eclipse.assistant.listeners.EditorListenersManager.start(EditorListenersManager.java:57)
+	at com.codota.eclipse.CodotaPluginActivator.hookToNewWindows(CodotaPluginActivator.java:141)
+	at com.codota.eclipse.CodotaPluginActivator.start(CodotaPluginActivator.java:83)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:842)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:834)
+	... 21 more
+
+!ENTRY org.eclipse.equinox.registry 4 1 2020-08-31 01:29:28.283
+!MESSAGE Plug-in com.codota.eclipse was unable to load class com.codota.eclipse.NullDocumentSetupParticipant.
+!STACK 0
+java.lang.ClassNotFoundException: An error occurred while automatically activating bundle com.codota.eclipse (1232).
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:126)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:571)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:346)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:398)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:476)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:425)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:417)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:171)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:169)
+	at okhttp3.RealCall$AsyncCall.execute(RealCall.java:129)
+	at okhttp3.internal.NamedRunnable.run(NamedRunnable.java:32)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.osgi.framework.BundleException: Exception in com.codota.eclipse.CodotaPluginActivator.start() of bundle com.codota.eclipse.
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:863)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:791)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:1015)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:365)
+	at org.eclipse.osgi.container.Module.doStart(Module.java:603)
+	at org.eclipse.osgi.container.Module.start(Module.java:467)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:493)
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:117)
+	... 14 more
+Caused by: java.lang.NullPointerException
+	at com.codota.eclipse.assistant.listeners.EditorListenersManager.start(EditorListenersManager.java:57)
+	at com.codota.eclipse.CodotaPluginActivator.hookToNewWindows(CodotaPluginActivator.java:141)
+	at com.codota.eclipse.CodotaPluginActivator.start(CodotaPluginActivator.java:83)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:842)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:834)
+	... 21 more
+
+!ENTRY org.eclipse.equinox.registry 4 1 2020-08-31 01:45:23.336
+!MESSAGE Plug-in com.codota.eclipse was unable to load class com.codota.eclipse.NullDocumentSetupParticipant.
+!STACK 0
+java.lang.ClassNotFoundException: An error occurred while automatically activating bundle com.codota.eclipse (1232).
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:126)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:571)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:346)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:398)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:476)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:425)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:417)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:171)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:169)
+	at okhttp3.RealCall$AsyncCall.execute(RealCall.java:129)
+	at okhttp3.internal.NamedRunnable.run(NamedRunnable.java:32)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.osgi.framework.BundleException: Exception in com.codota.eclipse.CodotaPluginActivator.start() of bundle com.codota.eclipse.
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:863)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:791)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:1015)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:365)
+	at org.eclipse.osgi.container.Module.doStart(Module.java:603)
+	at org.eclipse.osgi.container.Module.start(Module.java:467)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:493)
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:117)
+	... 14 more
+Caused by: java.lang.NullPointerException
+	at com.codota.eclipse.assistant.listeners.EditorListenersManager.start(EditorListenersManager.java:57)
+	at com.codota.eclipse.CodotaPluginActivator.hookToNewWindows(CodotaPluginActivator.java:141)
+	at com.codota.eclipse.CodotaPluginActivator.start(CodotaPluginActivator.java:83)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:842)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:834)
+	... 21 more
+
+!ENTRY org.eclipse.equinox.registry 4 1 2020-08-31 01:45:24.536
+!MESSAGE Plug-in com.codota.eclipse was unable to load class com.codota.eclipse.NullDocumentSetupParticipant.
+!STACK 0
+java.lang.ClassNotFoundException: An error occurred while automatically activating bundle com.codota.eclipse (1232).
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:126)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:571)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:346)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:398)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:476)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:425)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:417)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:171)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:169)
+	at okhttp3.RealCall$AsyncCall.execute(RealCall.java:129)
+	at okhttp3.internal.NamedRunnable.run(NamedRunnable.java:32)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.osgi.framework.BundleException: Exception in com.codota.eclipse.CodotaPluginActivator.start() of bundle com.codota.eclipse.
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:863)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:791)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:1015)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:365)
+	at org.eclipse.osgi.container.Module.doStart(Module.java:603)
+	at org.eclipse.osgi.container.Module.start(Module.java:467)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:493)
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:117)
+	... 14 more
+Caused by: java.lang.NullPointerException
+	at com.codota.eclipse.assistant.listeners.EditorListenersManager.start(EditorListenersManager.java:57)
+	at com.codota.eclipse.CodotaPluginActivator.hookToNewWindows(CodotaPluginActivator.java:141)
+	at com.codota.eclipse.CodotaPluginActivator.start(CodotaPluginActivator.java:83)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:842)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:834)
+	... 21 more
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2020-08-31 09:25:07.919
+!MESSAGE Connection to https://spring.io/blog.atom failed on spring.io. Retry attempt 0 started
+!STACK 0
+java.net.UnknownHostException: spring.io
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(Unknown Source)
+	at java.net.InetAddress.getAddressesFromNameService(Unknown Source)
+	at java.net.InetAddress.getAllByName0(Unknown Source)
+	at java.net.InetAddress.getAllByName(Unknown Source)
+	at java.net.InetAddress.getAllByName(Unknown Source)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:112)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:373)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:394)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:237)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:185)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1000)
+	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:992)
+	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:988)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2020-08-31 09:25:07.922
+!MESSAGE Connection to https://dist.springsource.com/release/STS/doc/updates.xml failed on dist.springsource.com. Retry attempt 0 started
+!STACK 0
+java.net.UnknownHostException: dist.springsource.com
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(Unknown Source)
+	at java.net.InetAddress.getAddressesFromNameService(Unknown Source)
+	at java.net.InetAddress.getAllByName0(Unknown Source)
+	at java.net.InetAddress.getAllByName(Unknown Source)
+	at java.net.InetAddress.getAllByName(Unknown Source)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:112)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:373)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:394)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:237)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:185)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1000)
+	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:992)
+	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:988)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SESSION 2020-09-03 10:02:49.536 -----------------------------------------------
+eclipse.buildId=4.14.0.I20191210-0610
+java.version=1.8.0_231
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_IN
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.jface 2 0 2020-09-03 10:03:54.809
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2020-09-03 10:03:54.809
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@2d4e6bb2,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@13453610,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY com.genuitec.eclipse.patches 2 0 2020-09-03 10:04:17.128
+!MESSAGE Patches instrumentation extension PerformanceJavaNavigatorContentProviderPatch ([31078] [Angular] Webclipse UI freezes constantly after closing/reopening Angular 2 projects) has not weaved class org.eclipse.jdt.internal.ui.navigator.JavaNavigatorContentProvider.
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-09-03 10:04:34.677
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-09-03 10:04:34.683
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@246c2f56[org.springframework.tooling.boot.ls:1.14.0.201912170939(id=1031)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-09-03 10:04:34.704
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-09-03 10:04:34.949
+!MESSAGE Instantiating ReusableClasspathListenerHandler
+
+!ENTRY org.eclipse.egit.ui 2 0 2020-09-03 10:04:45.162
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Rohit'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-09-03 10:04:57.437
+!MESSAGE Boot LS startup time from start to initialized: 22646ms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-09-03 10:04:57.848
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.sGGRGrlfisBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-09-03 10:04:57.866
+!MESSAGE subscribing to classpath changes: sts4.classpath.sGGRGrlf isBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-09-03 10:04:57.881
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-09-03 10:04:57.907
+!MESSAGE subsribers = {sts4.classpath.sGGRGrlf=Send Classpath Notifications(676)}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-09-03 10:04:57.910
+!MESSAGE Sending initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-09-03 10:04:57.913
+!MESSAGE project Inventory ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-09-03 10:04:57.918
+!MESSAGE project Income ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-09-03 10:04:57.922
+!MESSAGE project Accounting ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-09-03 10:04:57.924
+!MESSAGE Preparing classpath changed notification Inventory
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-09-03 10:04:57.928
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-09-03 10:04:57.956
+!MESSAGE project Accounting SKIPPED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-09-03 10:04:57.964
+!MESSAGE project Banking ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-09-03 10:04:57.967
+!MESSAGE project Banking SKIPPED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-09-03 10:04:57.971
+!MESSAGE project Expense ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-09-03 10:04:57.975
+!MESSAGE project Expense SKIPPED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-09-03 10:04:57.979
+!MESSAGE project GST ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-09-03 10:04:57.982
+!MESSAGE project GST SKIPPED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-09-03 10:04:57.984
+!MESSAGE project Login-and-Registration ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-09-03 10:04:57.987
+!MESSAGE project Login-and-Registration SKIPPED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-09-03 10:04:57.990
+!MESSAGE project Payroll ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-09-03 10:04:57.993
+!MESSAGE project Payroll SKIPPED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-09-03 10:04:57.996
+!MESSAGE project Report ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-09-03 10:04:57.999
+!MESSAGE project Report SKIPPED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-09-03 10:04:58.002
+!MESSAGE Sending initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-09-03 10:04:58.006
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.sGGRGrlf => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-09-03 10:04:58.083
+!MESSAGE classpath=127 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-09-03 10:04:58.291
+!MESSAGE buffering callback sts4.classpath.sGGRGrlf Inventory false 127
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-09-03 10:04:58.294
+!MESSAGE Preparing classpath changed notification Income
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-09-03 10:04:58.297
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-09-03 10:04:58.345
+!MESSAGE classpath=127 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-09-03 10:04:58.382
+!MESSAGE buffering callback sts4.classpath.sGGRGrlf Income false 127
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-09-03 10:04:58.392
+!MESSAGE executing callback sts4.classpath.sGGRGrlf 2 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-09-03 10:05:00.686
+!MESSAGE executing callback sts4.classpath.sGGRGrlf FAILED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 4 0 2020-09-03 10:05:00.689
+!MESSAGE 
+!STACK 0
+java.util.concurrent.TimeoutException
+	at java.util.concurrent.CompletableFuture.timedGet(Unknown Source)
+	at java.util.concurrent.CompletableFuture.get(Unknown Source)
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.executeClientCommand(LSP4ECommandExecutor.java:37)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.flush(SendClasspathNotificationsJob.java:197)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.run(SendClasspathNotificationsJob.java:168)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.springframework.ide.eclipse.beans.core 2 0 2020-09-03 10:05:15.541
+!MESSAGE Error occured while running bean post processors
+!STACK 0
+java.lang.IllegalStateException: Error processing condition on org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:60)
+	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:102)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader$TrackedConditionEvaluator.shouldSkip(ConfigurationClassBeanDefinitionReader.java:444)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader$TrackedConditionEvaluator.shouldSkip(ConfigurationClassBeanDefinitionReader.java:433)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForConfigurationClass(ConfigurationClassBeanDefinitionReader.java:127)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitions(ConfigurationClassBeanDefinitionReader.java:116)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:320)
+	at org.springframework.ide.eclipse.metadata.process.JdtConfigurationClassPostProcessor.postProcess(JdtConfigurationClassPostProcessor.java:88)
+	at org.springframework.ide.eclipse.beans.core.internal.model.BeansJavaConfig$3.run(BeansJavaConfig.java:332)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.springframework.ide.eclipse.beans.core.internal.model.BeansJavaConfig.executePostProcessor(BeansJavaConfig.java:321)
+	at org.springframework.ide.eclipse.beans.core.internal.model.BeansJavaConfig.access$5(BeansJavaConfig.java:319)
+	at org.springframework.ide.eclipse.beans.core.internal.model.BeansJavaConfig$2.call(BeansJavaConfig.java:233)
+	at org.springframework.ide.eclipse.beans.core.internal.model.BeansJavaConfig$2.call(BeansJavaConfig.java:1)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.boot.autoconfigure.condition.BeanTypeRegistry': Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.boot.autoconfigure.condition.BeanTypeRegistry]: No default constructor found; nested exception is java.lang.NoSuchMethodException: org.springframework.boot.autoconfigure.condition.BeanTypeRegistry.<init>()
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1159)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1103)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:511)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:481)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:312)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:308)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.boot.autoconfigure.condition.BeanTypeRegistry.get(BeanTypeRegistry.java:346)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.collectBeanNamesForType(OnBeanCondition.java:268)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getBeanNamesForType(OnBeanCondition.java:262)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getBeanNamesForType(OnBeanCondition.java:251)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getMatchingBeans(OnBeanCondition.java:171)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getMatchOutcome(OnBeanCondition.java:117)
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:47)
+	... 19 more
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.boot.autoconfigure.condition.BeanTypeRegistry]: No default constructor found; nested exception is java.lang.NoSuchMethodException: org.springframework.boot.autoconfigure.condition.BeanTypeRegistry.<init>()
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:85)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1151)
+	... 33 more
+Caused by: java.lang.NoSuchMethodException: org.springframework.boot.autoconfigure.condition.BeanTypeRegistry.<init>()
+	at java.lang.Class.getConstructor0(Unknown Source)
+	at java.lang.Class.getDeclaredConstructor(Unknown Source)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:80)
+	... 34 more
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-09-03 10:16:29.872
+!MESSAGE Preparing classpath changed notification Dashboard
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-09-03 10:16:29.873
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-09-03 10:16:29.876
+!MESSAGE classpath=22 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-09-03 10:16:29.878
+!MESSAGE buffering callback sts4.classpath.sGGRGrlf Dashboard false 22
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-09-03 10:16:29.878
+!MESSAGE executing callback sts4.classpath.sGGRGrlf 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-09-03 10:16:29.889
+!MESSAGE executing callback sts4.classpath.sGGRGrlf SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-09-03 10:16:41.059
+!MESSAGE Preparing classpath changed notification Dashboard
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-09-03 10:16:41.062
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-09-03 10:16:41.107
+!MESSAGE classpath=127 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-09-03 10:16:41.133
+!MESSAGE buffering callback sts4.classpath.sGGRGrlf Dashboard false 127
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-09-03 10:16:41.135
+!MESSAGE executing callback sts4.classpath.sGGRGrlf 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-09-03 10:16:41.169
+!MESSAGE executing callback sts4.classpath.sGGRGrlf SUCCESS [done]
